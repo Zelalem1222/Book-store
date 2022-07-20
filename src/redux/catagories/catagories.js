@@ -4,7 +4,6 @@ const catagoriesReducer = (state = [], action) => {
   switch (action.type) {
     case CHECK_STATUS:
       return 'UNDER CONSTRUCTION';
-
     default:
       return state;
   }
