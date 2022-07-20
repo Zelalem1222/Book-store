@@ -1,4 +1,3 @@
-/* eslint-disable */
 const CHECK_STATUS = 'CHECK_STATUS';
 
 const catagoriesReducer = (state = [], action) => {
@@ -15,4 +14,3 @@ export const checkStatus = () => ({
 });
 
 export default catagoriesReducer;
-
