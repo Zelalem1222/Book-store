@@ -1,38 +1,55 @@
+/* eslint-disable */
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
+const LOAD_BOOK = 'LOAD_BOOK';
 
-const initialBooks = [];
+const initialBooks = [
+  {
+    id:'1',
+    title:"In Search of Lost Time ", 
+    author: "Marcel Proust"
+  },
+  {
+    id:'2',
+    title:"Harry Potter", 
+    author: "J.K. Rowling"
+  },
+  {
+    id:'3',
+    title:"The Adventures of Huckleberry Finn", 
+    author: "Mark Twain"
+  },
+
+];
 
 const booksReducer = (state = initialBooks, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return [
-        ...state, {
-          id: action.id,
-          title: action.title,
-          author: action.author,
-        },
-      ];
-
+      return [...state , action.payload];
+    case LOAD_BOOK:
+      return [...state , action.payload]
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.id);
+      return state.filter((book) => book.id !== action.payload);
 
     default:
       return state;
   }
 };
 
-const addBook = () => ({
+const addBook = (newBook) => ({
   type: ADD_BOOK,
-  id: 0,
-  title: 'Harry Potter',
-  author: 'J.K. Rowling',
+  payload : newBook
 });
+
+const  loadBook = (book) => ({
+  type: LOAD_BOOK,
+  payload: book
+})
 
 const removeBook = (id) => ({
   type: REMOVE_BOOK,
-  id,
+  payload:id
 });
 
 export default booksReducer;
-export { addBook, removeBook };
+export { addBook, removeBook , loadBook };
