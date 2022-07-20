@@ -1,7 +1,7 @@
 /* eslint-disable */
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
-const LOAD_BOOK = 'LOAD_BOOK';
+
 
 const initialBooks = [
   {
@@ -26,8 +26,6 @@ const booksReducer = (state = initialBooks, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state , action.payload];
-    case LOAD_BOOK:
-      return [...state , action.payload]
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload);
 
@@ -41,10 +39,6 @@ const addBook = (newBook) => ({
   payload : newBook
 });
 
-const  loadBook = (book) => ({
-  type: LOAD_BOOK,
-  payload: book
-})
 
 const removeBook = (id) => ({
   type: REMOVE_BOOK,
@@ -52,4 +46,4 @@ const removeBook = (id) => ({
 });
 
 export default booksReducer;
-export { addBook, removeBook , loadBook };
+export { addBook, removeBook  };
