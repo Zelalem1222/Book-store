@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { addBookToApi } from '../redux/books/thunkFunctions';
 
 const AddBook = () => {
   const [inputText, setInputText] = useState({
@@ -20,10 +20,11 @@ const AddBook = () => {
     id: uuidv4(),
     title: inputText.title,
     author: inputText.author,
+    category: 'Fiction',
   };
   const dispatch = useDispatch();
   const handelAddBook = () => {
-    dispatch(addBook(newBook));
+    dispatch(addBookToApi(newBook));
   };
 
   const handleSubmit = (e) => {
