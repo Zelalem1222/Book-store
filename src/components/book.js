@@ -2,21 +2,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books'
+import { removeBookFromApi } from '../redux/books/thunkFunctions'
 
 function Book(props) {
-  const {id, title, author } = props;
+  const {id, title, author , catagory } = props;
   const dispatch = useDispatch();
   const handleRemove = ()=> {
-    dispatch(removeBook(id))
+    dispatch(removeBookFromApi(id))
   }
 
   return (
     <div>
+      <div>
+        <span>{catagory}</span>
       <li key={id}>
         {title} : {author}
       </li>
       <button onClick={handleRemove} type="button"> Remove</button>
+      </div>
     </div>
   );
 }
