@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { TextField, Button } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBookToApi } from '../redux/books/thunkFunctions';
+import '../styles/addBooks.css';
 
 const AddBook = () => {
   const [inputText, setInputText] = useState({
@@ -33,10 +35,35 @@ const AddBook = () => {
   };
 
   return (
+
     <form onSubmit={handleSubmit}>
-      <input value={inputText.title} name="title" type="text" onChange={handleChange} placeholder="title" />
-      <input value={inputText.author} name="author" type="text" onChange={handleChange} placeholder="author" />
-      <button type="submit" onClick={handelAddBook}>Add Book</button>
+      <div className="componentDivider" />
+      <h2 className="addBookTitle">Add new book</h2>
+      <div className="inputsContainer">
+        <TextField
+          id="outlined-size-small"
+          size="small"
+          label="Title"
+          variant="outlined"
+          value={inputText.title}
+          name="title"
+          type="text"
+          onChange={handleChange}
+          placeholder="title"
+        />
+        <TextField
+          id="outlined-size-small"
+          size="small"
+          label="Author"
+          variant="outlined"
+          value={inputText.author}
+          name="author"
+          type="text"
+          onChange={handleChange}
+          placeholder="author"
+        />
+        <Button variant="contained" className="addBookBtn" type="submit" onClick={handelAddBook}>Add Book</Button>
+      </div>
     </form>
   );
 };
