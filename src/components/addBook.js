@@ -50,6 +50,7 @@ const AddBook = () => {
           type="text"
           onChange={handleChange}
           placeholder="title"
+          className="inputs"
         />
         <TextField
           id="outlined-size-small"
@@ -61,6 +62,7 @@ const AddBook = () => {
           type="text"
           onChange={handleChange}
           placeholder="author"
+          className="inputs"
         />
         <Button variant="contained" className="addBookBtn" type="submit" onClick={handelAddBook}>Add Book</Button>
       </div>

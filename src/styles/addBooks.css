@@ -23,15 +23,19 @@ form {
   margin-inline: auto;
 }
 
+.inputsContainer button {
+  background-color: var(--blue);
+}
+
 .inputs {
   border: 1px solid #e8e8e8;
-  width: 30%;
+  width: 40%;
 }
 
 .addBookBtn {
   border: none;
   align-self: center;
-  background: #0290ff;
+  background-color: var(--blue);
   font-family: var(--roboto);
   color: #fff;
   font-weight: 700;

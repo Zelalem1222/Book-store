@@ -50,7 +50,6 @@ function Book(props) {
             size={60}
             animationSmooth="1s ease-out"
             colorCircle="#e6e6e6"
-            linearGradient={['yellow', '#ff0000']}
             round
             percent={Progress}
             number={!isDesktop}

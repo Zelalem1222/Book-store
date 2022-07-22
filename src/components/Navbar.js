@@ -46,7 +46,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 4.5rem;
   height: 50px;
   font-family: var(--montserrat);
   @media screen and (min-width: 768px) {
