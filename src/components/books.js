@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import AddBook from './addBook';
 import Book from './book';
@@ -12,8 +13,7 @@ function Books() {
   }, []);
 
   return (
-    <div>
-      <h1>Books</h1>
+    <BookWrapper>
       {books.map((book) => (
         <Book
           key={book.id}
@@ -25,8 +25,12 @@ function Books() {
       ))}
 
       <AddBook />
-    </div>
+    </BookWrapper>
   );
 }
 
 export default Books;
+const BookWrapper = styled.section`
+  background-color: var(--light-gray);
+  padding-top: 20px;
+`;

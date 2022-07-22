@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:root {
+  --pale-grey: #f5f6fa;
+  --white-three: rgba(0, 0, 0, 0.05);
+  --blue: #0290ff;
+  --white: white;
+  --light-gray: #fafafa;
+  --light-blue: #4386bf;
+  --mid-gray: #888;
+  --montserrat: 'Montserrat', sans-serif;
+  --roboto: 'Roboto', sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
+
+button,
+input {
+  appearance: none;
+  border: none;
+}
+
+body {
+  max-width: 1400px;
+  margin-inline: auto;
+}

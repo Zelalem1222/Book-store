@@ -1,5 +1,7 @@
+/* eslint-disable */
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import './app.css'
 import NavBar from './components/Navbar';
 import Books from './components/books';
 import Catagories from './components/Catagories';
