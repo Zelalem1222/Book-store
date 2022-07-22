@@ -8,7 +8,7 @@ import useWindowSize from './useWindowSize';
 
 function Book(props) {
   const {
-    id, title, author, catagory,
+    id, title, author,
   } = props;
   const dispatch = useDispatch();
   const handleRemove = () => {
@@ -24,7 +24,7 @@ function Book(props) {
     <BookList>
       <ListItem key={id}>
         <BookInfoContainer>
-          <Category>{catagory}</Category>
+          <Category>Fiction</Category>
           <Title>{title}</Title>
           <Author>{author}</Author>
 
@@ -84,7 +84,6 @@ Book.propTypes = ({
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  catagory: PropTypes.string.isRequired,
 });
 
 export default Book;
