@@ -33,7 +33,7 @@ const Navbar = () => {
           <NavigationLink to="/books" onClick={handleClose}>
             Books
           </NavigationLink>
-          <NavigationLink to="/categories" onClick={handleClose}>
+          <NavigationLink to="/catagories" onClick={handleClose}>
             CATEGORIES
           </NavigationLink>
         </LinkItem>

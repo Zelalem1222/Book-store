@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import './app.css'
 import NavBar from './components/Navbar';
 import Books from './components/books';
-import Catagories from './components/Catagories';
+import Catagories from './components/catagories';
 import FrontPage from './components/front_page';
 
 function App() {
