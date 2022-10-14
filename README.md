@@ -24,6 +24,10 @@ To get a local copy up and running follow these simple example steps.
 - npm install
 - npm start
 
+## Live Demo
+
+[Live Demo Link](https://book-store-react-app22.netlify.app/)
+
 
 ## Author
 
