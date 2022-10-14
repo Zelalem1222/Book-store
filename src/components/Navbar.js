@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <MainTitle>Bookstore CMS</MainTitle>
+      <MainTitle>Book Store</MainTitle>
       {isOpen ? (
         <CloseIcon onClick={handleClose} />
       ) : (
@@ -27,6 +27,9 @@ const Navbar = () => {
 
       <NavLinks className={isOpen ? 'open' : null}>
         <LinkItem>
+          <NavigationLink to="/home" onClick={handleClose}>
+            Home
+          </NavigationLink>
           <NavigationLink to="/books" onClick={handleClose}>
             Books
           </NavigationLink>
